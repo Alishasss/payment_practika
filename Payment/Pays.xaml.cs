@@ -32,8 +32,23 @@ namespace Payment
         private void DataGrid_Loaded(object sender, RoutedEventArgs e)
         {
             List<Class_pays> result = new List<Class_pays>(6);
-          
+           
             grid_categ.ItemsSource = result;
+        }
+
+        private void btn_plus_Click(object sender, RoutedEventArgs e)
+        {
+            Data_form data = new Data_form();
+            data.Show();
+            this.Close();
+
+
+        }
+
+        private void btn_minus_Click(object sender, RoutedEventArgs e)
+        {
+            Delete delete = new Delete();
+            delete.Show();
         }
     }
 }

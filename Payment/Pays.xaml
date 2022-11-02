@@ -12,18 +12,25 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
-            <Button x:Name="btn_plus" Width="40" Height="40" Margin="15 0 0 0 " Content="+"></Button>
-            <Button x:Name="btn_minus" Width="40" Height="40" Margin="15 0 0 0 " Content="-"></Button>
+            <Button x:Name="btn_plus" Width="40" Height="40" Margin="15 0 0 0 " Content="+" Click="btn_plus_Click" Background="White"></Button>
+            <Button x:Name="btn_minus" Width="40" Height="40" Margin="15 0 0 0 " Content="-" Background="White" Click="btn_minus_Click"></Button>
             <Label Content="C" VerticalAlignment="Center" FontSize="15" Margin="10 0 0 0"></Label>
-            <ComboBox x:Name="cmb_firstdate" Width="120" Height="35" Margin="10 0 0 0"></ComboBox>
+            <ComboBox x:Name="cmb_firstdate" Width="120" Height="35" Margin="10 0 0 0" >
+                <ComboBox.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </ComboBox.Background>
+            </ComboBox>
             <Label Content="по" VerticalAlignment="Center" FontSize="15" Margin="10 0 0 0 "></Label>
             <ComboBox x:Name="cmb_seconddate" Width="120" Height="35" Margin="10 0 0 0"></ComboBox>
             <Label Content="Категория" VerticalAlignment="Center" FontSize="15" Margin="30 0 0 0"></Label>
             <ComboBox x:Name="cmb_category" Width="120" Height="35" Margin="10 0 0 0"></ComboBox>
-            <Button x:Name="btn_chose" Content="Выбрать" Height="35" Width="100" Margin="20 0 0 0"></Button>
-            <Button x:Name="btn_clean" Content="Очистить" Height="35" Width="100" Margin="10 0 0 0"></Button>
-            <Button x:Name="btn_report" Content="Отчёт" Height="35" Width="100" Margin="10 0 0 0"></Button>
+            <Button x:Name="btn_chose" Content="Выбрать" Height="35" Width="100" Margin="20 0 0 0" Background="White"></Button>
+            <Button x:Name="btn_clean" Content="Очистить" Height="35" Width="100" Margin="10 0 0 0" Background="White"></Button>
+            <Button x:Name="btn_report" Content="Отчёт" Height="35" Width="100" Margin="10 0 0 0" Background="White"></Button>
         </StackPanel>
-        <DataGrid x:Name="grid_categ" Grid.Row="1" Margin="10"  AutoGenerateColumns="True" Foreground="#FF073B97" Grid.RowSpan="3" FontSize="20" MinColumnWidth="100" MaxColumnWidth="400" CanUserReorderColumns="False" RowBackground="#FFDADADA" AlternatingRowBackground="White" Background="White" SelectionChanged="DataGrid_SelectionChanged" Loaded="DataGrid_Loaded"></DataGrid>
+        <DataGrid x:Name="grid_categ" Grid.Row="1" Margin="10"  AutoGenerateColumns="True" Foreground="#FF020C1D" Grid.RowSpan="3" FontSize="20" MinColumnWidth="200" MaxColumnWidth="500" CanUserReorderColumns="False" RowBackground="#FFDADADA" AlternatingRowBackground="White" Background="White" SelectionChanged="DataGrid_SelectionChanged" Loaded="DataGrid_Loaded"></DataGrid>
     </Grid>
 </Window>
