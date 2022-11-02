@@ -30,17 +30,7 @@ namespace Payment
 
         private void btn_input_Click(object sender, RoutedEventArgs e)
         {
-            //Authorization();
-            //var user = Instances.db.Users.FirstOrDefault(q => q.login.Contains("") && q.password.Contains(""));
-            //if(user !=null)
-            //{
-            //    Pays pays = new Pays();
-            //    pays.Show();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Такого пользователя не существует!");
-            //}
+           
         }
 
         //private void Authorization()
